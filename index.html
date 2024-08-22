@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="schedule.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Montserrat:wght@500&family=Poppins:wght@300&family=Roboto+Slab&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<body>
+    <header class="wrapper-header">
+        <img class="logo" src="assets/IMG-20240822-WA0012.jpg" alt="logo">
+        <nav class="nav-bar-utama">
+            <ul class="header">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="scroll-schedule">Schedule</a></li>
+                <li><a href="https://www.instagram.com/genelfone/"><button class="button nav-bar-utama">Sosial
+                            Media</button></a></li>
+            </ul>
+        </nav>
+        <div class="menu-bar">
+            <input type="checkbox" class="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <div class="container">
+        <!-- <div class="wrapper-main">
+            <div class="container-text">
+                <h1 class="judul">X-O CLASS</h1>
+                <p class="paragraf">
+                    blom tau isiny
+                </p>
+            </div>
+        </div> -->
+        <div class="wrapper-schedule">
+            <div class="container-schedule">
+                <div class="container-clock">
+                    <div class="table-center">
+                        <h1 class="clock"></h1>
+                    </div>
+                    <h4 class="note">NB: SAAT JAM > 19:00, MAKA ROSTER AKAN TERGANTI KE ESOK HARI</h4>
+                </div>
+                <div class="container-main">
+                    <div class="wrapper-roster wrap">
+                        <h3 class="table-center text">Roster Kelas XI F1 - H</h3>
+                        <div class="table-center">
+                            <table class="table-1">
+                                <tbody class="tbody-1">
+                                    <tr class="head">
+                                        <th class="Jam table-border">Jam</th>
+                                        <th class="day table-border"></th>
+                                    </tr>
+                            </table>
+                        </div>
+                        <div class="table-center">
+                            <table class="current-schedule table2">
+                                <tr class="head head-2">
+                                    <th class="clock-lesson table-border">Jam</th>
+                                    <th class="table-border">Jadwal Sekarang</th>
+                                </tr>
+                                <tr>
+                                    <td class="data-2 current-clock"></td>
+                                    <td class="data-2 current-data"></td>
+                                </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                    <div class="wrapper-piket wrap">
+                        <h2 class="text-center text">Jadwal Piket</h2>
+                        <div class="table-center">
+                            <table class="piket-schedule">
+                                <tr class="head">
+                                    <th class="day table-border"></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="schedule.js"></script>
+        </div>
+    </div>
+    <footer class="wrapper-footer">
+        <h3 class="footer-text">© 2024 All Rights Reserved.</h3>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
