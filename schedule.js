@@ -28,7 +28,8 @@ const hariAslii = () =>{
   }
 }
 
-const hariAsli = hariAslii()
+// const hariAsli = hariAslii()
+const hariAsli = 6
 
 day.forEach(element => {
   if (hari.getHours() >= 19) {
