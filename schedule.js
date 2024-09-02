@@ -152,9 +152,9 @@ let listJam = [
       MinuteEnd: 15,
     },
     {
-      mapel: "Sejarah",
+      mapel: "Bahasa Jepang",
       JamStart: 9,
-      MinuteStart: 15,
+      MinuteStart: 5,
       JamEnd: 9,
       MinuteEnd: 55,
     },
@@ -166,7 +166,7 @@ let listJam = [
       MinuteEnd: 10,
     },
     {
-      mapel: "Sejarah",
+      mapel: "Bahasa Jepang",
       JamStart: 10,
       MinuteStart: 10,
       JamEnd: 10,
@@ -210,7 +210,7 @@ let listJam = [
       MinuteEnd: 45,
     },
     {
-      mapel: "Bahasa Indonesia",
+      mapel: "Sejarah",
       JamStart: 7,
       MinuteStart: 45,
       JamEnd: 9,
@@ -275,7 +275,7 @@ let listJam = [
       MinuteEnd: 35,
     },
     {
-      mapel: "Kimia",
+      mapel: "PJOK",
       JamStart: 8,
       MinuteStart: 35,
       JamEnd: 9,
@@ -292,13 +292,6 @@ let listJam = [
       mapel: "Kimia",
       JamStart: 10,
       MinuteStart: 10,
-      JamEnd: 10,
-      MinuteEnd: 50,
-    },
-    {
-      mapel: "PJOK",
-      JamStart: 10,
-      MinuteStart: 50,
       JamEnd: 12,
       MinuteEnd: 10,
     },
@@ -312,7 +305,7 @@ let listJam = [
     {
       mapel: "Biologi",
       JamStart: 12,
-      MinuteStart: 40,
+      MinuteStart: 45,
       JamEnd: 14,
       MinuteEnd: 45,
     },
@@ -386,7 +379,7 @@ let listJam = [
     {
       mapel: "Pendidikan Pancasila",
       JamStart: 11,
-      MinuteStart: 45,
+      MinuteStart: 5,
       JamEnd: 12,
       MinuteEnd: 15,
     },
@@ -426,12 +419,11 @@ const Piket = daftarPiket[hariAsli].forEach(element =>{
 })
 
 const minute = value =>{
-  if (value == 0) {
-    return "00"
+  if (value == 0 || value < 10) {
+    return "0"+value
   }else
   return value
 }
-
 
 if (hariAsli != 0) {
   for (let i = 0; i < listJam[hariAsli].length; i++) {
