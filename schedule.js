@@ -70,7 +70,6 @@ const minutes = ()=>{
 };
 
 setInterval(() => {
-    const date = new Date()
     const clock = document.querySelector('.clock')
     clock.innerHTML = 
     hours()+":"+
@@ -82,7 +81,7 @@ setInterval(() => {
 
 let listJam = [
   [
-
+// array 0
   ],
   [
     //Senin
@@ -142,6 +141,27 @@ let listJam = [
       JamEnd: 14,
       MinuteEnd: 10,
     },
+    {
+      mapel: "Istirahat",
+      JamStart: 14,
+      MinuteStart: 10,
+      JamEnd: 14,
+      MinuteEnd: 45,
+    },
+    {
+      mapel: "Bahasa Arab Fullday",
+      JamStart: 14,
+      MinuteStart: 45,
+      JamEnd: 15,
+      MinuteEnd: 45,
+    },
+    {
+      mapel: "English Fullday",
+      JamStart: 15,
+      MinuteStart: 45,
+      JamEnd: 16,
+      MinuteEnd: 45,
+    },
   ],
   [
     {
@@ -154,7 +174,7 @@ let listJam = [
     {
       mapel: "Bahasa Jepang",
       JamStart: 9,
-      MinuteStart: 5,
+      MinuteStart: 15,
       JamEnd: 9,
       MinuteEnd: 55,
     },
@@ -192,6 +212,20 @@ let listJam = [
       MinuteStart: 50,
       JamEnd: 14,
       MinuteEnd: 10,
+    },
+    {
+      mapel: "Istirahat",
+      JamStart: 14,
+      MinuteStart: 10,
+      JamEnd: 14,
+      MinuteEnd: 45,
+    },
+    {
+      mapel: "Tahfiz",
+      JamStart: 14,
+      MinuteStart: 45,
+      JamEnd: 15,
+      MinuteEnd: 45,
     },
   ],
   [
