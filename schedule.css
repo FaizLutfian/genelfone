@@ -98,9 +98,6 @@
 }
 
 @media screen and (max-width: 430px) {
-    .wrapper-header {
-        width: 95%;
-    }
 
     .header {
         display: flex;
