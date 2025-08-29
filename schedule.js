@@ -5,7 +5,7 @@ const btn = document.querySelector('.btn')
 const currentData = document.querySelector(".current-data")
 const currentClock = document.querySelector('.current-clock')
 const hari = new Date()
-const listDay = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu" ]
+const listDay = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
 
 // const listLsn = [
 //     ["B.Indo", "Al-Quran Hadist", "B.Jerman", "B.Arab"],
@@ -17,13 +17,13 @@ const listDay = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu" 
 //     ["Libur"]
 // ]
 
-const hariAslii = () =>{
+const hariAslii = () => {
   if (hari.getHours() >= 19) {
     if (hari.getDay() == 7) {
       return 1
     }
-    return hari.getDay()+1
-  }else{
+    return hari.getDay() + 1
+  } else {
     return hari.getDay()
   }
 }
@@ -33,7 +33,7 @@ const hariAsli = hariAslii()
 day.forEach(element => {
   if (hari.getHours() >= 19) {
     element.innerHTML = "Besok"
-  }else{
+  } else {
     element.innerHTML = listDay[hariAsli]
   }
 });
@@ -41,39 +41,39 @@ day.forEach(element => {
 
 //Jam Digital
 
-const seconds = () =>{
+const seconds = () => {
   const date = new Date()
-  if (date.getSeconds() < 10){
-    return "0"+date.getSeconds()
-  }else{
+  if (date.getSeconds() < 10) {
+    return "0" + date.getSeconds()
+  } else {
     return date.getSeconds()
   }
 }
 
-const hours = () =>{
+const hours = () => {
   const date = new Date()
 
   if (date.getHours() < 10) {
-    return "0"+date.getHours()
-  }else{
+    return "0" + date.getHours()
+  } else {
     return date.getHours()
   }
 }
 
-const minutes = ()=>{
+const minutes = () => {
   const date = new Date();
-  if (date.getMinutes()<10 ) {
-    return "0"+date.getMinutes()
+  if (date.getMinutes() < 10) {
+    return "0" + date.getMinutes()
   } else {
     return date.getMinutes()
   }
 };
 
 setInterval(() => {
-    const clock = document.querySelector('.clock')
-    clock.innerHTML = 
-    hours()+":"+
-    minutes()+":"+
+  const clock = document.querySelector('.clock')
+  clock.innerHTML =
+    hours() + ":" +
+    minutes() + ":" +
     seconds()
 }, 1000);
 
@@ -81,7 +81,7 @@ setInterval(() => {
 
 let listJam = [
   [
-// array 0
+    // array 0
   ],
   [
     //Senin
@@ -135,7 +135,7 @@ let listJam = [
       MinuteEnd: 50,
     },
     {
-      mapel: "Fisika"",
+      mapel: "Fisika",
       JamStart: 12,
       MinuteStart: 50,
       JamEnd: 14,
@@ -415,27 +415,27 @@ let listJam = [
 
 const daftarPiket = [
   ['Libur'],
-  ["Rasha","Fahri","Salsabila","Saskiya","Adinda","Jinur","Hikmatul"],
-  ["Nazmy",'Baihaqi','Fawaz', 'Widya', 'Amanda', 'Irqathaya'],
-  ['Altaf', 'Jami', 'Fudil', 'Rara','Salwa','Fatimah'],
-  ['A. Fawaz','Intan','Jimut','Zahra',"A. Rahma"],
-  ['Maulana', 'Dzacky','Jisal','Tiara','Khairunnisa','Azaria','Suci'],
-  ['Faiz', "Hanif", "Jasmine",'Nurul','Shafa','A. Janna','Nadya']
+  ["Rasha", "Fahri", "Salsabila", "Saskiya", "Adinda", "Jinur", "Hikmatul"],
+  ["Nazmy", 'Baihaqi', 'Fawaz', 'Widya', 'Amanda', 'Irqathaya'],
+  ['Altaf', 'Jami', 'Fudil', 'Rara', 'Salwa', 'Fatimah'],
+  ['A. Fawaz', 'Intan', 'Jimut', 'Zahra', "A. Rahma"],
+  ['Maulana', 'Dzacky', 'Jisal', 'Tiara', 'Khairunnisa', 'Azaria', 'Suci'],
+  ['Faiz', "Hanif", "Jasmine", 'Nurul', 'Shafa', 'A. Janna', 'Nadya']
 ]
 
 
-const Piket = daftarPiket[hariAsli].forEach(element =>{
+const Piket = daftarPiket[hariAsli].forEach(element => {
   const listPiket = document.createElement('tr')
   listPiket.className = 'data'
   listPiket.innerHTML = `<td>${element}</td>`
   bodyPiket.append(listPiket)
 })
 
-const minute = value =>{
+const minute = value => {
   if (value == 0 || value < 10) {
-    return "0"+value
-  }else
-  return value
+    return "0" + value
+  } else
+    return value
 }
 
 if (hariAsli != 0) {
@@ -445,7 +445,7 @@ if (hariAsli != 0) {
     listData.innerHTML = `<td>${listJam[hariAsli][i].JamStart}:${minute(listJam[hariAsli][i].MinuteStart)} - ${listJam[hariAsli][i].JamEnd}:${minute(listJam[hariAsli][i].MinuteEnd)}</td><td>${listJam[hariAsli][i].mapel}</td>`
     bodyTable.append(listData)
   }
-}else{
+} else {
   const listData = document.createElement('tr')
   listData.className = 'data'
   listData.innerHTML = "<td>Libur</td><td>Libur</td>"
@@ -455,9 +455,9 @@ if (hariAsli != 0) {
 const Istirahat = (hari) => {
   if (hari <= 4) {
     return "9:55 - 10:10"
-  } else if(hari == 5){
+  } else if (hari == 5) {
     return "9:30 - 9:45"
-  }else if (hari == 6) {
+  } else if (hari == 6) {
     return "10:10 - 10:25"
   }
 }
@@ -478,7 +478,7 @@ setInterval(() => {
       // const realConv = timeConv(jamS,minS);
       const listConvStart = timeConv(roster.JamStart, roster.MinuteStart);
       const listConvEnd = timeConv(roster.JamEnd, roster.MinuteEnd);
-      const t = listJam[date.getDay()][listJam[date.getDay()].length-1]
+      const t = listJam[date.getDay()][listJam[date.getDay()].length - 1]
       // if (
       //   (realConv >= timeConv(9, 55)-1 & realConv <= timeConv(10, 10)-1 & date.getDay() <= 4) ||
       //   (realConv >= timeConv(9, 30)-1 & realConv <= timeConv(9, 45)-1 & date.getDay() == 5) ||
@@ -498,11 +498,11 @@ setInterval(() => {
         currentData.innerHTML = roster.mapel;
         currentClock.innerHTML = `${roster.JamStart}:${minute(roster.MinuteStart)} - ${roster.JamEnd}:${minute(roster.MinuteEnd)}`
         break;
-      // } else if (
-      //   (date.getHours() >= roster.Pulang) &
-      //   ((date.getHours() <= 22) & (date.getMinutes() < 1))
-      // ) {
-      //   currentData.textContent = "Istirahat";
+        // } else if (
+        //   (date.getHours() >= roster.Pulang) &
+        //   ((date.getHours() <= 22) & (date.getMinutes() < 1))
+        // ) {
+        //   currentData.textContent = "Istirahat";
       } else {
         currentData.textContent = "Pulang";
         currentClock.innerHTML = `>${t.JamEnd}:${t.MinuteEnd}`
